@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface TaskDao {
 
-    @Query("SELECT * FROM Task ORDER BY deadline ASC")
+    @Query("SELECT * FROM Task ORDER BY deadline DESC")
     fun getAll(): Flow<List<Task>>
 
     @Insert

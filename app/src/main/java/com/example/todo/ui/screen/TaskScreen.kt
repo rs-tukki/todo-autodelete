@@ -84,9 +84,17 @@ fun TaskScreen(viewModel: TaskViewModel = viewModel()) {
 
         Spacer(Modifier.height(16.dp))
 
-        LazyColumn {
-            items(tasks) { task ->
-                TaskItem(task, onDelete = { viewModel.deleteTask(task) })
+        LazyColumn (
+            modifier = Modifier.weight(1f)
+        ) {
+            items(
+                items = tasks,
+                key = { it.id }
+            ) { task ->
+                TaskItem(
+                    task = task,
+                    onDelete = { viewModel.deleteTask(task) }
+                )
             }
         }
     }
