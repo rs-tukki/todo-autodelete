@@ -58,11 +58,6 @@ fun TaskItem(
                 modifier = Modifier
                     .matchParentSize()
                     .background(MaterialTheme.colorScheme.surfaceVariant)
-            )
-
-            Box(
-                modifier = Modifier
-                    .matchParentSize()
             ) {
                 Box(
                     modifier = Modifier
